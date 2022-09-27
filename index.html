@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Alarm Clock</title>
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <!-- Div: Page content -->
+        <div id="content">
+            <!-- Element to display the current time -->
+            <div id="clock-face"></div>
+            <!-- Element to display the current time -->
+            <!-- Element to display the heading -->
+            <h1>Set Your Alarm</h1>
+            <!-- Element to display the heading -->
+            <!-- Form element to set the alarm -->
+            <form id="set-alarm-form" class="row">
+                <input
+                    id="hour-val"
+                    name="hour-val"
+                    type="number"
+                    min="01"
+                    max="12"
+                    placeholder="hh"
+                    required
+                    class="form-control col-sm-1"
+                >
+                <span> :</span>
+                <input
+                    id="min-val"
+                    name="min-val"
+                    type="number"
+                    min="00"
+                    max="59"
+                    placeholder="mm"
+                    required
+                    class="form-control col-sm-1"
+                >
+                <span> :</span>
+                <input
+                    id="sec-val"
+                    name="sec-val"
+                    type="number"
+                    min="00"
+                    max="59"
+                    placeholder="ss"
+                    required
+                    class="form-control col-sm-1"
+                >
+                <select
+                    name="am-pm"
+                    id="am-pm"
+                    required
+                    class="form-control col-sm-1"
+                >
+                    <option value=""></option>
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+                <button
+                    class="btn btn-primary"
+                    type="button"
+                    id="set-alarm"
+                    onclick="setAlarm()"
+                > Set Alarm</button>
+            </form>
+            <!-- Form element to set the alarm -->
+            <!-- Div: Display alarms -->
+            <div id="list-div">
+                <p>Alarms</p>
+                <!-- Unordered list to display the alarms -->
+                <ul id="alarms-list"></ul>
+                <!-- Unordered list to display the alarms -->
+            </div>
+            <!-- Div: Display alarms -->
+        </div>
+        <!-- Div: Page content -->
+        <!-- Script -->
+        <script type="text/javascript" src="./assets/js/index.js"></script>
+        <!-- Script -->
+    </body>
+</html>
